@@ -1,4 +1,3 @@
-import React from "react"
 import { chunk } from 'lodash-es'
 
 function NavBar() {
