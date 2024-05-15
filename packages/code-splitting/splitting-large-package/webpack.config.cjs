@@ -10,12 +10,15 @@ module.exports = {
     asyncChunks: true,
     path: path.resolve(__dirname, "dist"),
   },
-  
+  externals: {
+    react: 'React',
+    'react-dom': 'ReactDOM'
+  },
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
-        exclude: /(node_module)/,
+        exclude: /node_modules/,
         use: {
           loader: "babel-loader",
           options: {
@@ -35,6 +38,9 @@ module.exports = {
     ],
   },
   optimization: {
+    minimize: true, // 启用代码压缩
+    concatenateModules: true, // 启用作用域提升
+    runtimeChunk: 'single', // 将运行时代码提取到单独文件
     splitChunks: {
       cacheGroups: {
         lodash: {

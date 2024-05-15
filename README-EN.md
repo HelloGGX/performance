@@ -1,119 +1,56 @@
 # react-performance-optimization
 
-## Project Overview and Usage
+## Project Overview and Usage Instructions
 - **README.md**: Project introduction and usage instructions.
 
 ## Code Splitting
-- **dynamic-import**
-  - **example.md**: Detailed explanation and code examples for dynamic imports.
-  - **DynamicImportComponent.js**: Code sample for dynamic import component.
-- **lazy-loading**
-  - **example.md**: Detailed explanation and code examples for lazy loading.
-  - **LazyLoadingComponent.js**: Code sample for lazy loading component.
-- **route-based-splitting**
-  - **example.md**: Detailed explanation and code examples for route-based splitting.
-  - **RouteBasedSplitting.js**: Code sample for route-based code splitting.
+- **dynamic-import**: Dynamically import modules to improve application load performance.
+- **lazy-loading**: Lazy load components or modules on demand to reduce initial load time.
+- **route-based-splitting**: Route-based code splitting to load code as needed based on routes.
+- **splitting-large-package**: Split large packages to avoid loading too much code at once.
 
 ## Rendering Optimization
-- **avoid-re-renders**
-  - **example.md**: Detailed explanation and code examples for avoiding unnecessary re-renders.
-  - **AvoidReRendersComponent.js**: Code sample for avoiding re-renders.
-- **use-memo**
-  - **example.md**: Detailed explanation and code examples for useMemo optimization.
-  - **UseMemoExample.js**: Code sample for useMemo.
-- **use-callback**
-  - **example.md**: Detailed explanation and code examples for useCallback optimization.
-  - **UseCallbackExample.js**: Code sample for useCallback.
-- **use-transition**
-  - **example.md**: Detailed explanation and code examples for useTransition optimization.
-  - **UseTransitionExample.js**: Code sample for useTransition.
-- **list-virtualization**
-  - **react-window**
-    - **example.md**: Detailed explanation and code examples for list virtualization using react-window.
-    - **ReactWindowExample.js**: Code sample for react-window.
-  - **react-virtualized**
-    - **example.md**: Detailed explanation and code examples for list virtualization using react-virtualized.
-    - **ReactVirtualizedExample.js**: Code sample for react-virtualized.
-- **concurrent-mode**
-  - **example.md**: Detailed explanation and code examples for Concurrent Mode.
-  - **ConcurrentModeExample.js**: Code sample for Concurrent Mode.
+- **avoid-re-renders**: Avoid unnecessary re-renders to improve rendering performance.
+- **use-memo**: Use `useMemo` to optimize performance by memoizing values and avoiding unnecessary calculations.
+- **use-callback**: Use `useCallback` to optimize performance by memoizing functions and avoiding unnecessary function creation.
+- **use-transition**: Use `useTransition` to implement concurrent mode and improve UI responsiveness.
+- **list-virtualization**: List virtualization to enhance long list rendering performance.
+  - **react-virtualized**: Use `react-virtualized` for list virtualization.
+  - **vue-virtualized**: Use `vue-virtualized` for list virtualization.
+- **concurrent-mode**: Concurrent mode to improve application responsiveness.
 
 ## Performance Monitoring
-- **react-profiler**
-  - **example.md**: Detailed explanation and code examples for performance analysis using React Profiler.
-  - **ReactProfilerExample.js**: Code sample for React Profiler.
-- **web-vitals**
-  - **example.md**: Detailed explanation and code examples for monitoring key performance metrics using Web Vitals.
-  - **WebVitalsExample.js**: Code sample for Web Vitals.
-- **lighthouse**
-  - **example.md**: Detailed explanation and usage examples for performance analysis using Lighthouse.
-  - **LighthouseExample.md**: Report example for Lighthouse.
+- **react-profiler**: Use React Profiler for performance monitoring and analysis.
+- **web-vitals**: Collect and report Core Web Vitals metrics to monitor page performance.
+- **lighthouse**: Use Lighthouse for web performance analysis and optimization suggestions.
 
 ## Network Optimization
-- **data-fetching**
-  - **react-query**
-    - **example.md**: Detailed explanation and code examples for data fetching and cache management using react-query.
-    - **ReactQueryExample.js**: Code sample for react-query.
-  - **swr**
-    - **example.md**: Detailed explanation and code examples for data fetching and cache management using SWR.
-    - **SWRExample.js**: Code sample for SWR.
-- **caching**
-  - **example.md**: Detailed explanation and code examples for caching strategies.
-  - **CachingExample.js**: Code sample for caching optimization.
-- **cdn-usage**
-  - **example.md**: Detailed explanation and examples for using CDN.
-  - **CDNUsageExample.md**: Specific example for CDN usage.
-- **http2**
-  - **example.md**: Detailed explanation and configuration examples for HTTP/2.
-  - **HTTP2Example.md**: Usage case for HTTP/2.
+- **data-fetching**: Optimize data fetching to improve data loading efficiency.
+  - **react-query**: Use `react-query` for data fetching and caching.
+  - **swr**: Use `swr` for data fetching and caching.
+- **caching**: Optimize caching to reduce network requests and improve load speed.
+- **cdn-usage**: Use CDNs to serve resources and improve load speeds.
+- **http2**: Use the HTTP/2 protocol to improve network transfer efficiency.
 
 ## Image Optimization
-- **lazy-load**
-  - **react-lazyload**
-    - **example.md**: Detailed explanation and code examples for image lazy loading using react-lazyload.
-    - **ReactLazyLoadExample.js**: Code sample for react-lazyload.
-- **responsive-images**
-  - **example.md**: Detailed explanation and code examples for responsive image loading.
-  - **ResponsiveImagesExample.js**: Code sample for responsive images.
-- **modern-formats**
-  - **example.md**: Detailed explanation and examples for modern image formats (like WebP).
-  - **ModernFormatsExample.md**: Usage example for modern image formats.
-- **image-compression**
-  - **example.md**: Detailed explanation and tool usage examples for image compression.
-  - **ImageCompressionExample.md**: Specific case for image compression.
+- **lazy-load**: Lazy load images to improve initial page load speed.
+  - **react-lazyload**: Use `react-lazyload` for image lazy loading.
+- **responsive-images**: Use responsive images to load different sizes based on device and screen size.
+- **modern-formats**: Use modern image formats (e.g., WebP) to improve image load and render speed.
+- **image-compression**: Compress images to reduce file size and improve load speed.
 
 ## Dependency Optimization
-- **bundle-analyzer**
-  - **example.md**: Detailed explanation and usage examples for package analysis and optimization using webpack-bundle-analyzer.
-  - **webpack.config.js**: Example Webpack configuration.
-- **tree-shaking**
-  - **example.md**: Detailed explanation and code examples for Tree Shaking optimization.
-  - **TreeShakingExample.js**: Code sample for Tree Shaking.
-- **import-optimization**
-  - **example.md**: Detailed explanation and code examples for dependency import optimization.
-  - **ImportOptimizationExample.js**: Code sample for dependency import optimization.
+- **bundle-analyzer**: Use a bundle analyzer to analyze and optimize bundle size.
+- **tree-shaking**: Use tree shaking to remove unused code and reduce bundle size.
+- **import-optimization**: Optimize module imports to reduce bundle size and load time.
 
 ## Server-Side Rendering
-- **nextjs**
-  - **example.md**: Detailed explanation and code examples for server-side rendering using Next.js.
-  - **pages/index.js**: Code sample for Next.js.
-- **custom-ssr**
-  - **example.md**: Detailed explanation and code examples for custom server-side rendering solutions.
-  - **CustomSSRExample.js**: Code sample for custom SSR.
-- **ssr-caching**
-  - **example.md**: Detailed explanation and code examples for SSR caching optimization.
-  - **SSRCachingExample.js**: Code sample for SSR caching.
+- **nextjs**: Use Next.js for server-side rendering to improve application performance.
+- **custom-ssr**: Custom server-side rendering to enhance performance and SEO.
+- **ssr-caching**: Server-side rendering caching to improve rendering speed and performance.
 
-## Other Optimizations
-- **preloading-prefetching**
-  - **example.md**: Detailed explanation and code examples for preloading and prefetching optimization.
-  - **PreloadingPrefetchingExample.js**: Code sample for preloading and prefetching.
-- **web-workers**
-  - **example.md**: Detailed explanation and code examples for optimization using Web Workers.
-  - **WebWorkersExample.js**: Code sample for Web Workers.
-- **code-minification**
-  - **example.md**: Detailed explanation and tool usage examples for code minification.
-  - **CodeMinificationExample.js**: Specific case for code minification.
-- **accessibility-optimization**
-  - **example.md**: Detailed explanation and code examples for accessibility optimization.
-  - **AccessibilityOptimizationExample.js**: Code sample for accessibility optimization.
+## Other Optimization
+- **preloading-prefetching**: Preload and prefetch resources to improve page load speed.
+- **web-workers**: Use Web Workers to execute tasks in the background and improve application responsiveness.
+- **code-minification**: Minify code to reduce file size and improve load speed.
+- **accessibility-optimization**: Optimize accessibility to improve user experience.
