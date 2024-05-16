@@ -1,5 +1,5 @@
 {
-  "name": "splitting-large-package",
+  "name": "dynamic-import",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -8,10 +8,8 @@
     "build": "npx webpack build"
   },
   "keywords": [],
+  "type": "module",
   "author": "ggx",
   "license": "ISC",
-  "description": "",
-  "devDependencies": {
-    "webpack-bundle-analyzer": "^4.10.2"
-  }
+  "description": ""
 }
