@@ -6,8 +6,8 @@
 ## V8引擎解析原理
 
 - **JavaScript**
-  - [parsing: 浏览器对 javascript 的解析策略]()
-  - speculative optimization: 利用v8的推测性执行，优化javascript代码
+  - **parsing**: [浏览器对 javascript 的解析策略](https://github.com/HelloGGX/performance/blob/master/packages/javascript/parsing/README-ZH.md)
+  - **speculative** optimization: 利用v8的推测性执行，优化javascript代码
 
 ## 代码分割
 - **dynamic-import**：动态引入模块，提高应用的加载性能。
