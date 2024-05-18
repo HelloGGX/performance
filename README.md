@@ -1,7 +1,7 @@
 # react-performance-optimization
 
 ## 项目概览和使用说明
-- **README.md**：项目介绍和使用说明。
+- **README.md**：性能大师：全面前端性能优化指南
 
 ## V8引擎解析原理
 
