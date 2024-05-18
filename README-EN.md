@@ -3,6 +3,11 @@
 ## Project Overview and Usage Instructions
 - **README.md**: Project introduction and usage instructions.
 
+## V8 Analysis Principle
+- **JavaScript**
+  - parsing: Browser parsing policy for javascript.
+  - speculative optimization: optimizing javascript code with speculative execution of v8
+
 ## Code Splitting
 - **dynamic-import**: Dynamically import modules to improve application load performance.
 - **lazy-loading**: Lazy load components or modules on demand to reduce initial load time.

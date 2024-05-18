@@ -3,6 +3,12 @@
 ## 项目概览和使用说明
 - **README.md**：项目介绍和使用说明。
 
+## V8引擎解析原理
+
+- **JavaScript**
+  - parsing: 浏览器对 javascript 的解析策略
+  - speculative optimization: 利用v8的推测性执行，优化javascript代码
+
 ## 代码分割
 - **dynamic-import**：动态引入模块，提高应用的加载性能。
 - **lazy-loading**：懒加载技术，按需加载组件或模块，减少初始加载时间。
