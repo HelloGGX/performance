@@ -5,7 +5,7 @@
 
 ## V8 Analysis Principle
 - **v8**
-  - **parsing**: [Browser parsing policy for javascript](https://github.com/HelloGGX/performance/blob/master/packages/javascript/parsing/README.md).
+  - **parsing**: [Browser parsing policy for javascript](https://github.com/HelloGGX/performance/blob/master/packages/v8/parsing/README.md).
   - **speculative** optimization: optimizing javascript code with speculative execution of v8
 
 ## Code Splitting
