@@ -4,7 +4,7 @@
 - **README.md**: PerfMaster: Comprehensive Front-End Performance Optimization
 
 ## V8 Analysis Principle
-- **JavaScript**
+- **v8**
   - **parsing**: [Browser parsing policy for javascript](https://github.com/HelloGGX/performance/blob/master/packages/javascript/parsing/README.md).
   - **speculative** optimization: optimizing javascript code with speculative execution of v8
 

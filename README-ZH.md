@@ -5,7 +5,7 @@
 
 ## V8引擎解析原理
 
-- **JavaScript**
+- **v8**
   - **parsing**: [浏览器对 javascript 的解析策略](https://github.com/HelloGGX/performance/blob/master/packages/javascript/parsing/README-ZH.md)
   - **speculative** optimization: 利用v8的推测性执行，优化javascript代码
 
