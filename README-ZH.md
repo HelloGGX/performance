@@ -4,11 +4,70 @@
 - **README.md**：性能大师：全面前端性能优化指南
 
 ## V8引擎解析原理
+1. **引言**
+   - 1.1 **V8_Overview**：V8引擎的发展历史及其在现代浏览器中的地位
+   - 1.2 **Importance_of_Optimization**：为什么性能优化对用户体验和开发者而言至关重要？
 
-- **v8**
-  - **parsing**: [浏览器对 javascript 的解析策略](https://github.com/HelloGGX/performance/blob/master/packages/v8/parsing/README-ZH.md)
-  - **speculative** [optimization: 利用v8的推测性执行，优化javascript代码](https://github.com/HelloGGX/performance/blob/master/packages/v8/speculative-optimization/README-ZH.md)
-  - **Mono-Poly-Megamorphism** [V8 引擎中的 Monomorphism, Polymorphism 和 Megamorphism](https://github.com/HelloGGX/performance/blob/master/packages/v8/Mono-Poly-Megamorphism/README-ZH.md)
+2. **JavaScript 引擎概述**
+   - 2.1 **Engine_Working_Principle**：JavaScript引擎是如何解释和执行代码的？
+   - 2.2 **V8_Architecture**：V8的架构与其他JavaScript引擎（如SpiderMonkey）有何不同？
+
+3. **即时编译 (JIT)**
+   - 3.1 **JIT_Basics**：JIT编译如何动态优化代码执行？
+   - 3.2 **Ignition_Interpreter**：为什么V8选择先使用解释器而不是直接编译？
+   - 3.3 **TurboFan_Compiler**：TurboFan如何在运行时进行高级优化？
+   - 3.4 **Baseline_Compiler**：Baseline Compiler如何平衡编译速度和优化程度？
+
+4. **内联缓存 (Inline Caching)**
+   - 4.1 **Inline_Caching_Mechanism**：内联缓存如何减少属性查找的时间？
+   - 4.2 **Polymorphic_Inline_Caches**：如何处理多种对象类型的内联缓存？
+
+5. **垃圾回收机制**
+   - 5.1 **GC_Basics**：垃圾回收如何管理内存？
+   - 5.2 **Generational_GC**：垃圾回收的分代机制如何提高效率？
+       - 5.2.1 **Scavenger**：新生代回收器如何高效回收短命对象？
+       - 5.2.2 **Mark_Sweep_Compact**：老生代回收器如何管理长命对象？
+
+6. **内存优化**
+   - 6.1 **Memory_Management**：不同内存管理策略的优缺点是什么？
+   - 6.2 **Object_Pooling**：对象池化如何减少垃圾回收频率？
+   - 6.3 **Compact_Object_Representation**：紧凑对象表示如何节省内存空间？
+
+7. **隐式类 (Hidden Classes)**
+   - 7.1 **Creation_and_Evolution**：隐式类如何动态创建和优化？
+   - 7.2 **Property_Access_Optimization**：如何利用隐式类优化属性访问？
+
+8. **代码内联 (Code Inlining)**
+   - 8.1 **Inlining_Basics**：代码内联如何减少函数调用开销？
+   - 8.2 **Inlining_Optimization**：哪些场景下代码内联最有效？
+
+9. **逃逸分析 (Escape Analysis)**
+   - 9.1 **Escape_Analysis_Basics**：逃逸分析如何确定对象的分配位置？
+   - 9.2 **Stack_vs_Heap_Allocation**：何时选择栈上分配而非堆上分配？
+
+10. **热路径优化 (Hot Path Optimization)**
+    - 10.1 **Hot_Path_Identification**：如何识别代码的热路径？
+    - 10.2 **Hot_Path_Strategies**：哪些优化策略适用于热路径？
+
+11. **反优化 (Deoptimization)**
+    - 11.1 **Deoptimization_Triggers**：哪些情况下需要反优化？
+    - 11.2 **Dynamic_Execution_Adjustment**：反优化如何动态调整执行模式？
+
+12. **异步优化**
+    - 12.1 **Async_Programming_Model**：异步编程如何改善性能？
+    - 12.2 **Promises_and_Async_Functions**：如何优化Promise和异步函数？
+
+13. **综合实例分析**
+    - 13.1 **Web_App_Optimization**：Web应用中常见的性能瓶颈及其解决方案。
+    - 13.2 **Node_js_Optimization**：Node.js环境中的性能优化重点。
+
+14. **未来展望**
+    - 14.1 **Cutting_edge_Techniques**：未来哪些技术可能进一步提升V8性能？
+    - 14.2 **Impact_of_New_Technologies**：新兴技术如何影响现有的性能优化方法？
+
+15. **结论**
+    - 15.1 **Key_Points_Summary**：回顾和总结V8性能优化的核心要点。
+    - 15.2 **Practical_Recommendations**：如何在实际开发中应用这些优化技术？
 
 ## 代码分割
 - **dynamic-import**：动态引入模块，提高应用的加载性能。
