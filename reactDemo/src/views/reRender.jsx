@@ -1,4 +1,13 @@
+import { useState } from 'react';
+
 function ReRenderUI() {
-  return <div>sdsds</div>;
+  const [value, setValue] = useState('');
+
+  const onChangeText = (e) => {
+    setValue(e.target.value);
+  };
+
+  return <input onChange={onChangeText} value={value} />;
 }
+
 export default ReRenderUI;

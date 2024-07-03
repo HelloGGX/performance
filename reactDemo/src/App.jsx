@@ -6,10 +6,10 @@ import { Suspense } from 'react';
 export default function Root() {
   return (
     <>
-      <div class="flex h-screen">
+      <div className="flex h-screen">
         <SideBar />
 
-        <main class="flex-1 bg-gray-100 p-4">
+        <main className="flex-1 bg-gray-100 p-4">
           <Suspense fallback={<Spinner />}>
             <Outlet />
           </Suspense>
