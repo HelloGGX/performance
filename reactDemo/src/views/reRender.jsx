@@ -7,7 +7,17 @@ function ReRenderUI() {
     setValue(e.target.value);
   };
 
-  return <input onChange={onChangeText} value={value} />;
+  return (
+    <>
+      <input placeholder="请输入" onChange={onChangeText} value={value} />
+      <p>
+        {value
+          .split('')
+          .map((word) => word && '🍕')
+          .join(' ')}
+      </p>
+    </>
+  );
 }
 
 export default ReRenderUI;
