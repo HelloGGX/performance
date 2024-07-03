@@ -1,13 +1,14 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 import routers from "./router/index.js";
+import "./index.css";
 import Root from "./App.jsx";
 
 const domNode = document.getElementById("root");
 
 const root = createRoot(domNode);
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <Root />,

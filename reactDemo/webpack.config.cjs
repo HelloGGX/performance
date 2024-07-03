@@ -17,7 +17,12 @@ module.exports = {
           loader: "babel-loader",
           options: {
             presets: [
-              "@babel/preset-react",
+              [
+                "@babel/preset-react",
+                {
+                  runtime: "automatic",
+                },
+              ],
               [
                 "@babel/preset-env",
                 {
@@ -28,6 +33,21 @@ module.exports = {
             ],
           },
         },
+      },
+      {
+        test: /\.css$/,
+        use: [
+          "style-loader",
+          "css-loader",
+          {
+            loader: "postcss-loader",
+            options: {
+              postcssOptions: {
+                plugins: [require("tailwindcss"), require("autoprefixer")],
+              },
+            },
+          },
+        ],
       },
     ],
   },

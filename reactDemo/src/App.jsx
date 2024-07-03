@@ -1,35 +1,20 @@
-import React from "react";
+import { Link, Outlet } from 'react-router-dom';
+import Spinner from './components/Spinner.jsx';
+import SideBar from './components/SideBar.jsx';
+import { Suspense } from 'react';
 
 export default function Root() {
   return (
     <>
-      <div id="sidebar">
-        <h1>React Router Contacts</h1>
-        <div>
-          <form id="search-form" role="search">
-            <input
-              id="q"
-              aria-label="Search contacts"
-              placeholder="Search"
-              type="search"
-              name="q"
-            />
-            <div id="search-spinner" aria-hidden hidden={true} />
-            <div className="sr-only" aria-live="polite"></div>
-          </form>
-          <form method="post">
-            <button type="submit">New</button>
-          </form>
-        </div>
-        <nav>
-          <ul>
-            <li>
-              <a href={`/contacts/1`}>Your Name</a>
-            </li>
-          </ul>
-        </nav>
+      <div class="flex h-screen">
+        <SideBar />
+
+        <main class="flex-1 bg-gray-100 p-4">
+          <Suspense fallback={<Spinner />}>
+            <Outlet />
+          </Suspense>
+        </main>
       </div>
-      <div id="detail"></div>
     </>
   );
 }
