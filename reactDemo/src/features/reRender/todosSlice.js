@@ -4,7 +4,7 @@ import { createSlice, createEntityAdapter, nanoid } from '@reduxjs/toolkit';
 const todosAdapter = createEntityAdapter();
 
 const initialTodos = {
-  todos: Array.from({ length: 100000 }, (_, index) => ({
+  todos: Array.from({ length: 10000 }, (_, index) => ({
     id: nanoid(),
     title: `Todo ${index}`,
     completed: false,
