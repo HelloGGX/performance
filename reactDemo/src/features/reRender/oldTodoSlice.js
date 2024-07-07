@@ -1,7 +1,7 @@
 import { createSlice, nanoid } from '@reduxjs/toolkit';
 
 const initialState = {
-  todos: Array.from({ length: 1000 }, (_, index) => ({
+  todos: Array.from({ length: 10000 }, (_, index) => ({
     id: index,
     title: `Todo ${index}`,
     completed: false,
