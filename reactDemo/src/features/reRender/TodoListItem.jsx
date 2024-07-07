@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { toggleTodo } from './todosSlice';
+import { toggleTodo } from './oldTodoSlice';
 
 export default function TodoItem({ todo }) {
   const dispatch = useDispatch();

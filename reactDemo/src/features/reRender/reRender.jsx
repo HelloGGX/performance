@@ -1,15 +1,10 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { useState, useEffect } from 'react';
-import { addTodo, selectAllTodos, initializeTodos } from './todosSlice.js';
+import { useState } from 'react';
+import { addTodo } from './oldTodoSlice.js';
 import TodoItem from './TodoListItem.jsx';
 
 export default function Todo() {
-  const todos = useSelector(selectAllTodos);
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(initializeTodos());
-  }, [dispatch]);
+  const todos = useSelector((state) => state.todos.todos);
 
   return (
     <>
