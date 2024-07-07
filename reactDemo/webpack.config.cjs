@@ -1,12 +1,12 @@
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const path = require("path");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
 
 module.exports = {
-  mode: "development",
-  entry: "./src/index.js",
+  mode: 'development',
+  entry: './src/index.js',
   output: {
-    filename: "[name].chunk.js",
-    path: path.resolve(__dirname, "dist"),
+    filename: '[name].chunk.js',
+    path: path.resolve(__dirname, 'dist'),
   },
   module: {
     rules: [
@@ -14,20 +14,20 @@ module.exports = {
         test: /\.(js|jsx)$/,
         exclude: /(node_module)/,
         use: {
-          loader: "babel-loader",
+          loader: 'babel-loader',
           options: {
             presets: [
               [
-                "@babel/preset-react",
+                '@babel/preset-react',
                 {
-                  runtime: "automatic",
+                  runtime: 'automatic',
                 },
               ],
               [
-                "@babel/preset-env",
+                '@babel/preset-env',
                 {
-                  useBuiltIns: "usage",
-                  corejs: "3.37",
+                  useBuiltIns: 'usage',
+                  corejs: '3.37',
                 },
               ],
             ],
@@ -37,13 +37,13 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
-          "style-loader",
-          "css-loader",
+          'style-loader',
+          'css-loader',
           {
-            loader: "postcss-loader",
+            loader: 'postcss-loader',
             options: {
               postcssOptions: {
-                plugins: [require("tailwindcss"), require("autoprefixer")],
+                plugins: [require('tailwindcss'), require('autoprefixer')],
               },
             },
           },
@@ -65,8 +65,8 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, "./public/index.html"),
-      filename: "index.html",
+      template: path.join(__dirname, './public/index.html'),
+      filename: 'index.html',
     }),
   ],
 };
