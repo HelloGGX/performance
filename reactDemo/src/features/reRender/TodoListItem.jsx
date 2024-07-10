@@ -1,7 +1,8 @@
 import { useDispatch } from 'react-redux';
+import { memo } from 'react';
 import { toggleTodo } from './todosSlice';
 
-export default function TodoItem({ todo }) {
+function TodoItem({ todo }) {
   const dispatch = useDispatch();
 
   const handleToggle = (id) => {
@@ -36,3 +37,5 @@ export default function TodoItem({ todo }) {
     </li>
   );
 }
+
+export default memo(TodoItem);
