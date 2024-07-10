@@ -3,6 +3,8 @@ import { useState, useEffect } from 'react';
 import { addTodo, selectAllTodos, initializeTodos } from './todosSlice.js';
 import TodoItem from './TodoListItem.jsx';
 
+let startTime;
+
 export default function Todo() {
   const todos = useSelector(selectAllTodos);
   const dispatch = useDispatch();
@@ -10,6 +12,16 @@ export default function Todo() {
   useEffect(() => {
     dispatch(initializeTodos());
   }, [dispatch]);
+
+  useEffect(() => {
+    if (startTime) {
+      // 在新待办事项添加并渲染完成后记录结束时间
+      const endTime = performance.now();
+      const duration = endTime - startTime;
+      console.log(`New Todo Item Rendered in ${duration.toFixed(3)}ms`);
+      startTime = null; // 重置 startTime
+    }
+  }, [todos]);
 
   return (
     <>
@@ -28,6 +40,8 @@ function AddTodo() {
   const dispatch = useDispatch();
 
   const handleAdd = () => {
+    // 在点击添加按钮时记录开始时间
+    startTime = performance.now();
     dispatch(
       addTodo({
         title,
