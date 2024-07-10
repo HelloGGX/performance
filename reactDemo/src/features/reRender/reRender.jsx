@@ -1,10 +1,22 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { addTodo } from './oldTodoSlice.js';
 import TodoItem from './TodoListItem.jsx';
 
+let startTime;
+
 export default function Todo() {
   const todos = useSelector((state) => state.todos.todos);
+
+  useEffect(() => {
+    if (startTime) {
+      // 在新待办事项添加并渲染完成后记录结束时间
+      const endTime = performance.now();
+      const duration = endTime - startTime;
+      console.log(`New Todo Item Rendered in ${duration.toFixed(3)}ms`);
+      startTime = null; // 重置 startTime
+    }
+  }, [todos]);
 
   return (
     <>
@@ -21,7 +33,8 @@ export default function Todo() {
 function AddTodo() {
   const [title, setTitle] = useState('');
   const dispatch = useDispatch();
-
+  // 在点击添加按钮时记录开始时间
+  startTime = performance.now();
   const handleAdd = () => {
     dispatch(
       addTodo({
